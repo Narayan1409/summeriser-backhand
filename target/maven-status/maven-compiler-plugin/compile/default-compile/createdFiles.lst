@@ -1,1 +1,6 @@
 com/summerizers/hackathon/HackathonApplication.class
+com/summerizers/hackathon/Controller.class
+com/summerizers/hackathon/JsonFormatter.class
+com/summerizers/hackathon/SpeechToText.class
+com/summerizers/hackathon/SummerisingText.class
+com/summerizers/hackathon/WavStream.class
