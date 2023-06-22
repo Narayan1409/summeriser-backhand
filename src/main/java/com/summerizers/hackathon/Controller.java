@@ -8,10 +8,12 @@ import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
 
 import java.util.concurrent.ExecutionException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 public class Controller {
 
+    @CrossOrigin
     @GetMapping(value = "/speechtotext")
     public String getSpeechToTextUsingInputFile() throws FileNotFoundException, ExecutionException, InterruptedException {
         SpeechToText speechToText = new SpeechToText();
@@ -19,6 +21,7 @@ public class Controller {
         return gson.toJson(speechToText.generateTestFromInput());
     }
 
+@CrossOrigin
 @GetMapping(value = "/texttosummary")
     public String getTextToSummary() throws URISyntaxException, InterruptedException {
     SummerisingText summerisingText = new SummerisingText();
