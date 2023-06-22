@@ -15,69 +15,122 @@ public class SummerisingText {
     public Map<String, String> testToSummary() throws URISyntaxException, InterruptedException {
         String url = "https://languagehk2023.cognitiveservices.azure.com/language/analyze-conversations/jobs?api-version=2022-10-01-preview";
         String requestJson = """
-                {
-                       	"displayName": "Conversation Task Example",
-                       	"analysisInput": {
-                       		"conversations": [{
-                       			"conversationItems": [{
-                       					"text": "Hello, you’re chatting with Rene. How may I help you?",
-                       					"id": "1",
-                       					"role": "Agent",
-                       					"participantId": "Agent_1"
-                       				},
-                       				{
-                       					"text": "Hi, I tried to set up wifi connection for Smart Brew 300 espresso machine, but it didn’t work.",
-                       					"id": "2",
-                       					"role": "Customer",
-                       					"participantId": "Customer_1"
-                       				},
-                       				{
-                       					"text": "I’m sorry to hear that. Let’s see what we can do to fix this issue. Could you please try the following steps for me? First, could you push the wifi connection button, hold for 3 seconds, then let me know if the power light is slowly blinking on and off every second?",
-                       					"id": "3",
-                       					"role": "Agent",
-                       					"participantId": "Agent_1"
-                       				},
-                       				{
-                       					"text": "Yes, I pushed the wifi connection button, and now the power light is slowly blinking.",
-                       					"id": "4",
-                       					"role": "Customer",
-                       					"participantId": "Customer_1"
-                       				},
-                       				{
-                       					"text": "Great. Thank you! Now, please check in your Contoso Coffee app. Does it prompt to ask you to connect with the machine? ",
-                       					"id": "5",
-                       					"role": "Agent",
-                       					"participantId": "Agent_1"
-                       				},
-                       
-                       				{
-                       					"text": "No. Nothing happened.",
-                       					"id": "6",
-                       					"role": "Customer",
-                       					"participantId": "Customer_1"
-                       				},
-                       				{
-                       					"text": "Please restart your wi-fi modem to solve the issue with Contoso Coffee app",
-                       					"id": "7",
-                       					"role": "Agent",
-                       					"participantId": "Agent_1"
-                       				}
-                       			],
-                       			"modality": "text",
-                       			"id": "conversation1",
-                       			"language": "en"
-                       		}]
-                       	},
-                       	"tasks": [{
-                       		"taskName": "Conversation Task 1",
-                       		"kind": "ConversationalSummarizationTask",
-                       		"parameters": {
-                       			"summaryAspects": [
-                       				"chapterTitle", "narrative", "issue", "resolution"
-                       			]
-                       		}
-                       	}]
-                       }
+                 {
+                 	"displayName": "Request to Block Debit Card with ABN AMRO BANK",
+                 	"analysisInput": {
+                 		"conversations": [{
+                 			"conversationItems": [{
+                 					"text": "Good afternoon, Thanks for calling ABN AMRO Customer Care. You are speaking to Steven. How can I help you?",
+                 					"id": "1",
+                 					"role": "Agent",
+                 					"participantId": "Steven"
+                 				},
+                 				{
+                 					"text": "Hi, Good afternoon. My name is Anja. I am calling because I think I have lost my debit card.",
+                 					"id": "2",
+                 					"role": "Customer",
+                 					"participantId": "Anja"
+                 				},
+                 				{
+                 					"text": "Ohh, that's unfortunate to hear. Have you already blocked the card in your app?",
+                 					"id": "3",
+                 					"role": "Agent",
+                 					"participantId": "Steven"
+                 				},
+                 				{
+                 					"text": "I haven't.",
+                 					"id": "4",
+                 					"role": "Customer",
+                 					"participantId": "Anja"
+                 				},
+                 				{
+                 					"text": "Hey do you use the mobile banking app?",
+                 					"id": "5",
+                 					"role": "Agent",
+                 					"participantId": "Steven"
+                 				},
+                 				{
+                 					"text": "Yes I use it if you can help me where I can find that.",
+                 					"id": "6",
+                 					"role": "Customer",
+                 					"participantId": "Anja"
+                 				},
+                 				{
+                 					"text": "I will. If you can put me on speaker and get to the app then I'll explain to you how to do this.",
+                 					"id": "7",
+                 					"role": "Agent",
+                 					"participantId": "Steven"
+                 				},
+                 				{
+                 					"text": "Great, thank you.",
+                 					"id": "8",
+                 					"role": "Customer",
+                 					"participantId": "Anja"
+                 				},
+                 				{
+                 					"text": "So if you go to the app, at the bottom of the screen there's a self-service button.",
+                 					"id": "9",
+                 					"role": "Agent",
+                 					"participantId": "Steven"
+                 				},
+                 				{
+                 					"text": "Yes.",
+                 					"id": "10",
+                 					"role": "Customer",
+                 					"participantId": "Anja"
+                 				},
+                 				{
+                 					"text": "In the self-service menu you can select Debit cards.The screen will show you the debit cards that you own. You can select the debit card that is lost and click the block button.After blocking, it will ask you if you will also want to replace the debit card. You can select yes, check the address and replace the card right there.",
+                 					"id": "11",
+                 					"role": "Agent",
+                 					"participantId": "Steven"
+                 				},
+                 				{
+                 					"text": "Oh, That's great. Is that all?",
+                 					"id": "12",
+                 					"role": "Customer",
+                 					"participantId": "Anja"
+                 				},
+                 				{
+                 					"text": "That would be all, unless you have any further questions for me.",
+                 					"id": "13",
+                 					"role": "Agent",
+                 					"participantId": "Steven"
+                 				},
+                 				{
+                 					"text": " No, This was exactly what I was looking for. Thank you so much. ",
+                 					"id": "14",
+                 					"role": "Customer",
+                 					"participantId": "Anja"
+                 				},
+                 				{
+                 					"text": "All right. In that case, have a very nice day.",
+                 					"id": "15",
+                 					"role": "Agent",
+                 					"participantId": "Steven"
+                 				},
+                 				{
+                 					"text": " Thank you, Steven. Bye, bye. All right. Bye.",
+                 					"id": "16",
+                 					"role": "Customer",
+                 					"participantId": "Anja"
+                 				}
+                 			],
+                 			"modality": "text",
+                 			"id": "conversation1",
+                 			"language": "en"
+                 		}]
+                 	},
+                 	"tasks": [{
+                 		"taskName": "Conversation Task 1",
+                 		"kind": "ConversationalSummarizationTask",
+                 		"parameters": {
+                 			"summaryAspects": [
+                 				"chapterTitle", "narrative", "issue", "resolution"
+                 			]
+                 		}
+                 	}]
+                 }
                 """;
 
         HttpHeaders headers = new HttpHeaders();

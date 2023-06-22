@@ -33,7 +33,7 @@ public class SpeechToText {
 
         // Create an object that parses the WAV file and implements PullAudioInputStreamCallback to read audio data from the file.
         // Replace with your own audio file name.
-        WavStream wavStream = new WavStream(new FileInputStream("src/main/resources/test_call.wav"));
+        WavStream wavStream = new WavStream(new FileInputStream("src/main/resources/Summerizers-video.wav"));
         //WavStream wavStream = new WavStream(new FileInputStream("src/main/resources/test_call2.mp4"));
         // Create a pull audio input stream from the WAV file
         PullAudioInputStream inputStream = PullAudioInputStream.createPullStream(wavStream, wavStream.getFormat());
